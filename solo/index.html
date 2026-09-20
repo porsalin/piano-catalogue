@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solo · Piano Catalogue</title>
+<meta name="description" content="Classical piano recordings — solo and concertos.">
+<meta name="theme-color" content="#fafafa">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+
+</head>
+<body class="theme-solo">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><h1>Piano Catalogue</h1></a>
+    <nav aria-label="Primary">
+    <ul class="nav">
+      <li><a href="../solo/index.html" aria-current="page">Solo</a></li>
+      <li><a href="../concertos/index.html">Concertos</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap">
+  <div class="page-head">
+    <h1>Solo</h1>
+    <p class="meta">3,735 recordings · 195 pianists</p>
+  </div>
+  <nav class="subnav" aria-label="Solo sections">
+    <a href="index.html" aria-current="page">Search</a>
+    <a href="pianists/index.html">Pianists</a>
+    <a href="composers/index.html">Composers</a>
+  </nav>
+  <div class="search-panel">
+    <label for="q">Search</label>
+    <div class="search-row">
+      <input type="search" id="q" placeholder="Pianist, composer, work, label…" autocomplete="off">
+      <select id="filter-field" aria-label="Field">
+        <option value="all">All fields</option>
+        <option value="pianist">Pianist</option>
+        <option value="composer">Composer</option>
+        <option value="composition">Composition</option>
+        <option value="label">Label</option>
+        <option value="album">Album</option>
+      </select>
+    </div>
+    <p id="search-status"></p>
+    <div id="search-results" role="list"></div>
+  </div>
+</div>
+<script src="../assets/js/search.js"></script>
+<script>PianoCatalogueSearch.init({ indexUrl: "../data/solo-index.json" });</script>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>Piano Catalogue</span>
+    <a href="../about.html">About</a>
+  </div>
+</footer>
+</body>
+</html>
